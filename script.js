@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(function(link) {
         link.setAttribute('target', '_blank'); // 为每个链接设置target="_blank"
     });
+
+    // 搜索输入框的keypress事件监听器
+    var searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === "Enter") { // keyCode 13 是回车键
+            search(); // 执行搜索函数
+        }
+    });
 });
 
 function addTask() {
