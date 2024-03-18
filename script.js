@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-s
+
 function addTask() {
     var newTask = document.getElementById('new-task').value;
     if (newTask.trim() !== '') {
