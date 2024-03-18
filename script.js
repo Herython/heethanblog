@@ -15,8 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
             search(); // 执行搜索函数
         }
     });
-});
 
+    //为newtask输入框加入keypress监听器
+    var taskInput = document.getElementById('new-task');
+    taskInput.addEventListener('keypress', function(event) {
+        if (event.key === "Enter") {
+            addTask(); // 如果按下的是回车键，则调用 addTask 函数
+        }
+    });
+
+});
+s
 function addTask() {
     var newTask = document.getElementById('new-task').value;
     if (newTask.trim() !== '') {
